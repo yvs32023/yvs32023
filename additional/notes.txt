@@ -1,0 +1,5 @@
+-Denvironment=tst
+-DHeadless=false
+-DTestUserRoleFilter=RXCC_FULL_MULTI
+-DSysKey=RxCC,secretkey
+-Dbrowser=edge
