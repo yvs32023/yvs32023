@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:59:06 EST 2022
+commons-validator-1.2.0.jar>prod-nexus=
+commons-validator-1.2.0.pom>prod-nexus=

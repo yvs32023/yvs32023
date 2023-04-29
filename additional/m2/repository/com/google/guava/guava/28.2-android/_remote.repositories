@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:20 EST 2022
+guava-28.2-android.pom>excellus-tst-nexus=
+guava-28.2-android.jar>prd-nexus=
+guava-28.2-android.pom>prd-nexus=

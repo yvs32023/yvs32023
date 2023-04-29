@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Mar 24 12:45:47 EDT 2023
+jna-5.12.1.pom>excellus-tst-nexus=
+jna-5.12.1.jar>excellus-tst-nexus=
+jna-5.12.1.jar>prd-nexus=
+jna-5.12.1-sources.jar>excellus-tst-nexus=

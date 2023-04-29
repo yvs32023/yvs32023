@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:59:33 EST 2022
+maven-jar-plugin-2.4.pom>prod-nexus=
+maven-jar-plugin-2.4.jar>prod-nexus=

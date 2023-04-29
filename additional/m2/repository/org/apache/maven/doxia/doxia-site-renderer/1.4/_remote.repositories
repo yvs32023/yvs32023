@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 11:00:00 EST 2022
+doxia-site-renderer-1.4.jar>prod-nexus=
+doxia-site-renderer-1.4.pom>prod-nexus=

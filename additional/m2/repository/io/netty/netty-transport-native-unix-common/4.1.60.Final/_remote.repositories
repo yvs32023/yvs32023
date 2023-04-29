@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 21:54:29 EST 2023
+netty-transport-native-unix-common-4.1.60.Final.jar>prd-nexus=
+netty-transport-native-unix-common-4.1.60.Final.pom>excellus-tst-nexus=
+netty-transport-native-unix-common-4.1.60.Final.pom>prd-nexus=
+netty-transport-native-unix-common-4.1.60.Final.pom>central=
+netty-transport-native-unix-common-4.1.60.Final.jar>central=

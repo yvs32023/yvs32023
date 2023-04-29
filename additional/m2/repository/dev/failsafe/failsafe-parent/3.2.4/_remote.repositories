@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 21:23:11 EST 2023
+failsafe-parent-3.2.4.pom>central=
+failsafe-parent-3.2.4.pom>excellus-tst-nexus=

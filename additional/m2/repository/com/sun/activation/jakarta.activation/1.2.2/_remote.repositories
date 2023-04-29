@@ -1,0 +1,8 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 21:23:22 EST 2023
+jakarta.activation-1.2.2.pom>excellus-tst-nexus=
+jakarta.activation-1.2.2.jar>excellus-tst-nexus=
+jakarta.activation-1.2.2.pom>central=
+jakarta.activation-1.2.2.jar>central=
+jakarta.activation-1.2.2.pom>prd-nexus=
+jakarta.activation-1.2.2.jar>prd-nexus=

@@ -1,0 +1,8 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Mar 24 16:41:21 EDT 2023
+commons-collections-3.2.2.jar>excellus-tst-nexus=
+commons-collections-3.2.2.pom>prod-nexus=
+commons-collections-3.2.2-sources.jar>excellus-tst-nexus=
+commons-collections-3.2.2.pom>prd-nexus=
+commons-collections-3.2.2.jar>prod-nexus=
+commons-collections-3.2.2.jar>prd-nexus=

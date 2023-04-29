@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Mar 24 16:41:21 EDT 2023
+junit-jupiter-api-5.9.0-M1.jar>excellus-tst-nexus=
+junit-jupiter-api-5.9.0-M1.pom>prd-nexus=
+junit-jupiter-api-5.9.0-M1.pom>excellus-tst-nexus=
+junit-jupiter-api-5.9.0-M1.jar>prd-nexus=
+junit-jupiter-api-5.9.0-M1-sources.jar>excellus-tst-nexus=

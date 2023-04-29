@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:21 EST 2022
+libphonenumber-8.11.1.pom>excellus-tst-nexus=
+libphonenumber-8.11.1.pom>prd-nexus=
+libphonenumber-8.11.1.jar>prd-nexus=

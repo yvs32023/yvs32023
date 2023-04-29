@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:21 EST 2022
+msg-simple-1.2.pom>excellus-tst-nexus=
+msg-simple-1.2.jar>excellus-tst-nexus=
+msg-simple-1.2-sources.jar>excellus-tst-nexus=
+msg-simple-1.2.jar>prd-nexus=
+msg-simple-1.2.pom>prd-nexus=

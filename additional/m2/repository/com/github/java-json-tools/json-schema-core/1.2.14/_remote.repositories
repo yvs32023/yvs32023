@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:20 EST 2022
+json-schema-core-1.2.14.pom>excellus-tst-nexus=
+json-schema-core-1.2.14.jar>prd-nexus=
+json-schema-core-1.2.14.jar>excellus-tst-nexus=
+json-schema-core-1.2.14.pom>prd-nexus=
+json-schema-core-1.2.14-sources.jar>excellus-tst-nexus=

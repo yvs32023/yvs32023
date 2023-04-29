@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 22:11:41 EST 2023
+opentelemetry-sdk-common-1.9.0.pom>excellus-tst-nexus=
+opentelemetry-sdk-common-1.9.0.jar>central=
+opentelemetry-sdk-common-1.9.0.pom>prd-nexus=

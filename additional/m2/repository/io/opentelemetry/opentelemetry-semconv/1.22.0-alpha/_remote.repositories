@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Mar 24 16:41:16 EDT 2023
+opentelemetry-semconv-1.22.0-alpha.jar>prd-nexus=
+opentelemetry-semconv-1.22.0-alpha-sources.jar>excellus-tst-nexus=
+opentelemetry-semconv-1.22.0-alpha.jar>excellus-tst-nexus=
+opentelemetry-semconv-1.22.0-alpha.pom>prd-nexus=
+opentelemetry-semconv-1.22.0-alpha.pom>excellus-tst-nexus=

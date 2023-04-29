@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 21:54:56 EST 2023
+commons-logging-1.2.pom>excellus-tst-nexus=
+commons-logging-1.2.jar>prd-nexus=
+commons-logging-1.2.jar>prod-nexus=
+commons-logging-1.2-sources.jar>excellus-tst-nexus=
+commons-logging-1.2.pom>prod-nexus=
+commons-logging-1.2.jar>excellus-tst-nexus=
+commons-logging-1.2.pom>prd-nexus=

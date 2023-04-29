@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.excellus.sqa</groupId>
+  <artifactId>AutoTestRxConciergeUtility</artifactId>
+  <versioning>
+    <versions>
+      <version>0.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20221223044850</lastUpdated>
+  </versioning>
+</metadata>

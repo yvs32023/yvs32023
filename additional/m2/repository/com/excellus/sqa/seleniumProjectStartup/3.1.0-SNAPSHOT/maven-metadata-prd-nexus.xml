@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.excellus.sqa</groupId>
+  <artifactId>seleniumProjectStartup</artifactId>
+  <version>3.1.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20230310.201818</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20230310201818</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>3.1.0-20230310.201818-1</value>
+        <updated>20230310201818</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>3.1.0-20230310.201818-1</value>
+        <updated>20230310201818</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <classifier>javadoc</classifier>
+        <extension>jar</extension>
+        <value>3.1.0-20230310.201818-1</value>
+        <updated>20230310201818</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <classifier>sources</classifier>
+        <extension>jar</extension>
+        <value>3.1.0-20230310.201818-1</value>
+        <updated>20230310201818</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

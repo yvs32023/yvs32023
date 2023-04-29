@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:20 EST 2022
+gson-2.8.6.pom>excellus-tst-nexus=
+gson-2.8.6.pom>prd-nexus=
+gson-2.8.6-sources.jar>excellus-tst-nexus=
+gson-2.8.6.jar>prd-nexus=
+gson-2.8.6.jar>excellus-tst-nexus=

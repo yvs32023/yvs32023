@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Apr 19 17:54:40 EDT 2023
+commons-digester-2.1.pom>excellus-tst-nexus=
+commons-digester-2.1.jar>prd-nexus=
+commons-digester-2.1.jar>excellus-tst-nexus=
+commons-digester-2.1-sources.jar>excellus-tst-nexus=

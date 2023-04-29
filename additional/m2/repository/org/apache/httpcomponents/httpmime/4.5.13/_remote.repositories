@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:24 EST 2022
+httpmime-4.5.13.pom>excellus-tst-nexus=
+httpmime-4.5.13.jar>excellus-tst-nexus=
+httpmime-4.5.13-sources.jar>excellus-tst-nexus=
+httpmime-4.5.13.pom>prd-nexus=
+httpmime-4.5.13.jar>prd-nexus=

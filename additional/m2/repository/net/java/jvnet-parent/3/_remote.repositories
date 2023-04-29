@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Dec 28 21:58:50 EST 2022
+jvnet-parent-3.pom>prod-nexus=
+jvnet-parent-3.pom>excellus-tst-nexus=
+jvnet-parent-3.pom>prd-nexus=

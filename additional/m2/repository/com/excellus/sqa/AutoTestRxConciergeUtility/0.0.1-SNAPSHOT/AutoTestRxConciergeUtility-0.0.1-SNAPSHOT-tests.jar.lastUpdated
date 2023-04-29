@@ -1,0 +1,10 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Dec 28 18:48:00 EST 2022
+https\://nexus.excellus.com/content/groups/public/.error=
+http\://0.0.0.0/.error=Could not transfer artifact com.excellus.sqa\:AutoTestRxConciergeUtility\:jar\:tests\:0.0.1-SNAPSHOT from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [excellus-tst-nexus (http\://test-nexus.excellus.com/repository/public/, default, releases+snapshots)]
+http\://test-nexus.excellus.com/repository/public/.lastUpdated=1672164212842
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1672271279871
+file\:C\:\\Users\\vyeleswa/.m2/repository/.lastUpdated=1672271280291
+https\://nexus.excellus.com/content/groups/public/.lastUpdated=1672271280266
+file\:C\:\\Users\\vyeleswa/.m2/repository/.error=
+http\://test-nexus.excellus.com/repository/public/.error=

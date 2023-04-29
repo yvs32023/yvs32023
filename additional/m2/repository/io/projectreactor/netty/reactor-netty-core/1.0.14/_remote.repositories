@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:22 EST 2022
+reactor-netty-core-1.0.14.jar>excellus-tst-nexus=
+reactor-netty-core-1.0.14.pom>excellus-tst-nexus=
+reactor-netty-core-1.0.14-sources.jar>excellus-tst-nexus=
+reactor-netty-core-1.0.14.pom>prd-nexus=
+reactor-netty-core-1.0.14.jar>prd-nexus=

@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Mar 24 16:41:20 EDT 2023
+jsonassert-1.5.1.pom>excellus-tst-nexus=
+jsonassert-1.5.1.pom>prd-nexus=
+jsonassert-1.5.1.jar>excellus-tst-nexus=
+jsonassert-1.5.1-sources.jar>excellus-tst-nexus=
+jsonassert-1.5.1.jar>prd-nexus=

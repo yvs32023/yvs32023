@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Mar 24 16:41:09 EDT 2023
+netty-transport-native-kqueue-4.1.87.Final.pom>prd-nexus=
+netty-transport-native-kqueue-4.1.87.Final.jar>excellus-tst-nexus=
+netty-transport-native-kqueue-4.1.87.Final.jar>prd-nexus=
+netty-transport-native-kqueue-4.1.87.Final-sources.jar>excellus-tst-nexus=
+netty-transport-native-kqueue-4.1.87.Final.pom>excellus-tst-nexus=

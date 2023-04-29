@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 21:54:29 EST 2023
+plexus-component-annotations-2.1.1.jar>central=
+plexus-component-annotations-2.1.1.jar>prod-nexus=
+plexus-component-annotations-2.1.1.pom>central=
+plexus-component-annotations-2.1.1.pom>prod-nexus=
+plexus-component-annotations-2.1.1.pom>excellus-tst-nexus=

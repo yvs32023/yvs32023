@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 21:23:12 EST 2023
+https\://repo.maven.apache.org/maven2/.lastUpdated=1672798992779
+http\://0.0.0.0/.error=Could not transfer artifact org.slf4j\:slf4j-parent\:pom\:1.7.36 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [excellus-tst-nexus (http\://test-nexus.excellus.com/repository/public/, default, releases+snapshots)]
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1672798992739

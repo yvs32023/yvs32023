@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:57 EST 2022
+commons-codec-1.11.jar>prod-nexus=
+commons-codec-1.11.pom>prod-nexus=
+commons-codec-1.11.pom>prd-nexus=
+commons-codec-1.11.jar>prd-nexus=
+commons-codec-1.11.pom>excellus-tst-nexus=

@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:24 EST 2022
+json-schema-validator-4.4.0.pom>prd-nexus=
+json-schema-validator-4.4.0.jar>prd-nexus=
+json-schema-validator-4.4.0.jar>excellus-tst-nexus=
+json-schema-validator-4.4.0.pom>excellus-tst-nexus=
+json-schema-validator-4.4.0-sources.jar>excellus-tst-nexus=

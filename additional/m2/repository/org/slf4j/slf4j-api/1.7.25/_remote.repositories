@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 21:54:29 EST 2023
+slf4j-api-1.7.25.jar>central=
+slf4j-api-1.7.25.jar>prd-nexus=
+slf4j-api-1.7.25.pom>prd-nexus=
+slf4j-api-1.7.25.pom>central=
+slf4j-api-1.7.25.pom>excellus-tst-nexus=

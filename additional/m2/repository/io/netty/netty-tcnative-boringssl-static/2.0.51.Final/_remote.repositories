@@ -1,0 +1,16 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:23 EST 2022
+netty-tcnative-boringssl-static-2.0.51.Final-windows-x86_64.jar>excellus-tst-nexus=
+netty-tcnative-boringssl-static-2.0.51.Final-osx-x86_64.jar>excellus-tst-nexus=
+netty-tcnative-boringssl-static-2.0.51.Final-linux-aarch_64.jar>excellus-tst-nexus=
+netty-tcnative-boringssl-static-2.0.51.Final-linux-aarch_64.jar>prd-nexus=
+netty-tcnative-boringssl-static-2.0.51.Final-windows-x86_64.jar>prd-nexus=
+netty-tcnative-boringssl-static-2.0.51.Final-osx-aarch_64.jar>excellus-tst-nexus=
+netty-tcnative-boringssl-static-2.0.51.Final-linux-x86_64.jar>excellus-tst-nexus=
+netty-tcnative-boringssl-static-2.0.51.Final-osx-aarch_64.jar>prd-nexus=
+netty-tcnative-boringssl-static-2.0.51.Final.jar>prd-nexus=
+netty-tcnative-boringssl-static-2.0.51.Final.jar>excellus-tst-nexus=
+netty-tcnative-boringssl-static-2.0.51.Final-linux-x86_64.jar>prd-nexus=
+netty-tcnative-boringssl-static-2.0.51.Final.pom>excellus-tst-nexus=
+netty-tcnative-boringssl-static-2.0.51.Final.pom>prd-nexus=
+netty-tcnative-boringssl-static-2.0.51.Final-osx-x86_64.jar>prd-nexus=

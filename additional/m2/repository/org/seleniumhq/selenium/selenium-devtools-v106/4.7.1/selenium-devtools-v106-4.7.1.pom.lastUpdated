@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 22:25:26 EST 2023
+http\://0.0.0.0/.error=Could not transfer artifact org.seleniumhq.selenium\:selenium-devtools-v106\:pom\:4.7.1 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [excellus-tst-nexus (http\://test-nexus.excellus.com/repository/public/, default, releases+snapshots)]
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1672802726543
+https\://nexus.excellus.com/content/groups/public/.lastUpdated=1672802726856

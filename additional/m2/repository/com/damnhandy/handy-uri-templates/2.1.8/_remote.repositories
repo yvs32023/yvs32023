@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Apr 19 17:54:41 EDT 2023
+handy-uri-templates-2.1.8-sources.jar>excellus-tst-nexus=
+handy-uri-templates-2.1.8.jar>excellus-tst-nexus=
+handy-uri-templates-2.1.8.jar>prd-nexus=
+handy-uri-templates-2.1.8.pom>prd-nexus=
+handy-uri-templates-2.1.8.pom>excellus-tst-nexus=

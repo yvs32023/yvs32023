@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Mar 24 16:41:19 EDT 2023
+ojdbc8-19.3.0.0-sources.jar>excellus-tst-nexus=
+ojdbc8-19.3.0.0.pom>excellus-tst-nexus=
+ojdbc8-19.3.0.0.jar>prd-nexus=
+ojdbc8-19.3.0.0.jar>excellus-tst-nexus=
+ojdbc8-19.3.0.0.pom>prd-nexus=

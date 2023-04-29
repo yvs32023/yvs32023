@@ -1,0 +1,8 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 21:23:22 EST 2023
+asm-9.2.pom>prod-nexus=
+asm-9.2.pom>central=
+asm-9.2.pom>excellus-tst-nexus=
+asm-9.2.jar>prod-nexus=
+asm-9.2.jar>central=
+asm-9.2.jar>excellus-tst-nexus=

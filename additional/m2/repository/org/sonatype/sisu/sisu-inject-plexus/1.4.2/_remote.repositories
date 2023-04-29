@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Dec 22 23:50:00 EST 2022
+sisu-inject-plexus-1.4.2.pom>prod-nexus=
+sisu-inject-plexus-1.4.2.jar>prod-nexus=

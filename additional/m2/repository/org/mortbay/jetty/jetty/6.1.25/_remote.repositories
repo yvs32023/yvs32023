@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 11:00:01 EST 2022
+jetty-6.1.25.jar>prod-nexus=
+jetty-6.1.25.pom>prod-nexus=

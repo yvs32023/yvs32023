@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Mar 24 16:41:10 EDT 2023
+netty-resolver-4.1.87.Final.jar>prd-nexus=
+netty-resolver-4.1.87.Final-sources.jar>excellus-tst-nexus=
+netty-resolver-4.1.87.Final.jar>excellus-tst-nexus=
+netty-resolver-4.1.87.Final.pom>excellus-tst-nexus=
+netty-resolver-4.1.87.Final.pom>prd-nexus=

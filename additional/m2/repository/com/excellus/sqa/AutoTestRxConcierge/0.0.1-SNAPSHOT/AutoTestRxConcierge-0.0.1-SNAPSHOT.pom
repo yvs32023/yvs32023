@@ -1,0 +1,326 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.excellus.sqa</groupId>
+	<artifactId>AutoTestRxConcierge</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>EIT RxCC Test Automation</name>
+	<description>Test Automation for EIT Rx Clinical Concierge project</description>
+	<url>https://lifethc.sharepoint.com/sites/RxConciergeTeam_PHE_PRV</url>
+
+	<organization>
+		<name>Excellus - Software Quality Assurance</name>
+		<url>https://news.excellusbcbs.com/</url>
+	</organization>
+
+	<contributors>
+		<contributor>
+			<name>Garrett Cosmiano</name>
+			<email>GarrettMari.Cosmiano@excellus.com</email>
+		</contributor>
+	</contributors>
+
+	<properties>
+		<project.groupId>com.excellus.sqa</project.groupId>
+		<project.version>0.0.1-SNAPSHOT</project.version>
+		<java.version>11</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<junit.report.version>1.2.0-SNAPSHOT</junit.report.version>	<!-- GC (06/24/22) -->
+		<selenium.project.startup.version>2.2.1-SNAPSHOT</selenium.project.startup.version>	<!-- GC (06/24/22) -->
+		<test.resources>${project.basedir}/src/test/resources</test.resources>
+		<selenium.version>4.5.3</selenium.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- JUnit -->
+		<dependency>
+			<groupId>com.excellus.sqa</groupId>
+			<artifactId>junitReport</artifactId>
+			<version>${junit.report.version}</version>
+		</dependency>
+
+		<!-- Selenium -->
+		<dependency>
+			<groupId>com.excellus.sqa</groupId>
+			<artifactId>seleniumProjectStartup</artifactId>
+			<version>${selenium.project.startup.version}</version>
+		</dependency>
+
+		<!--
+			GC (05/04/22)
+			Controlling selenium version in the project instead of depending on seleniumProjectStartup.
+			This allows upgrading the DevTools version to match with the browser version
+		 -->
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+
+		<!-- GC (05/05/22) Added to avoid version conflict between selenium-java and selenium-remote-driver -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-remote-driver</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+
+		<!-- JSON utility -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20201115</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.6</version>
+		</dependency>
+
+		<!-- JSON schema validator -->
+		<dependency>
+			<groupId>com.github.java-json-tools</groupId>
+			<artifactId>json-schema-validator</artifactId>
+			<version>2.2.14</version>
+		</dependency>
+
+		<!--
+			Azure libraries
+
+			See version compatibility from https://mvnrepository.com/artifact/com.azure/azure-sdk-bom
+			Using azure-sdk-bom version 1.1.0, the versions for azure libraries are
+			* com.azure:azure-identity:1.4.3
+			* com.azure:azure-security-keyvault-secrets:4.3.6
+			* com.azure:azure-cosmos:4.25.0
+		-->
+
+		<dependency>
+			<groupId>com.azure</groupId>
+			<artifactId>azure-identity</artifactId>
+			<version>1.4.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.azure</groupId>
+			<artifactId>azure-security-keyvault-secrets</artifactId>
+			<version>4.3.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.azure</groupId>
+			<artifactId>azure-cosmos</artifactId>
+			<version>4.25.0</version>
+		</dependency>
+
+		<!--
+			GC (05/05/22)
+			Added dependency since Selenium Remote Driver uses older version
+			which conflicts with Azure Identity
+		 -->
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-tcnative-boringssl-static</artifactId>
+			<version>2.0.51.Final</version>
+		</dependency>
+
+		<!-- Common utilities -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.9</version>
+		</dependency>
+
+		<!-- GC (02/20/22) phone normalization -->
+		<dependency>
+			<groupId>com.googlecode.libphonenumber</groupId>
+			<artifactId>libphonenumber</artifactId>
+			<version>8.0.0</version>
+		</dependency>
+
+		<!-- GC (03/17/22) moved from API pom to parent. See https://github.com/google/guava for details on this library -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>31.0.1-jre</version>	<!-- GC (05/04/22) upgraded due to conflicts with selenium upgrade -->
+		</dependency>
+
+		<!-- GC (06/24/22) added since this is no longer part of JDK 11 -->
+
+		<dependency>
+			<groupId>javax.annotation</groupId>
+			<artifactId>javax.annotation-api</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+
+		<!-- REST Assured (GC (07/06/22) moved from API project) -->
+
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>5.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-schema-validator</artifactId>
+			<version>4.4.0</version>
+		</dependency>
+
+		<!-- LOGGING CONFIG (GC 12/08/22) -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.17.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.17.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>2.17.2</version>
+		</dependency>
+
+
+	</dependencies>
+
+	<repositories>
+
+		<repository>
+			<id>prd-nexus</id>
+			<name>Excelluse Nexus PRD environment</name>
+			<url>https://nexus.excellus.com/content/groups/public</url>
+		</repository>
+
+		<repository>
+			<id>local-repo</id>
+			<name>Local repository</name>
+			<url>file:${user.home}/.m2/repository</url>
+		</repository>
+
+	</repositories>
+
+	<profiles>
+		<profile>
+			<id>GenerateJunitReport</id>
+			<build>
+				<plugins>
+
+					<!-- Add the custom junit-frames.xsl from SQA junitReport project -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-dependency-plugin</artifactId>
+						<executions>
+							<execution>
+								<phase>test</phase>
+								<goals><goal>unpack</goal></goals>
+								<configuration>
+									<artifactItems>
+										<artifactItem>
+											<groupId>com.excellus.sqa</groupId>
+											<artifactId>junitReport</artifactId>
+											<version>${junit.report.version}</version>
+											<overWrite>false</overWrite>
+											<outputDirectory>${project.build.testOutputDirectory}</outputDirectory>
+											<includes>**/*.xsl</includes>
+										</artifactItem>
+									</artifactItems>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+
+					<!-- Build the HTML report -->
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>test-reports-only</id>
+								<phase>validate</phase>
+								<goals><goal>run</goal></goals>
+								<configuration>
+									<tasks>
+										<mkdir dir="target/xml-reports"/>
+										<mkdir dir="target/test-classes"/>
+										<copy todir="target/test-classes">
+											<fileset dir="${project.basedir}/src/test/resources" includes="**/junit-frames.xsl" />
+										</copy>
+										<junitreport todir="target/xml-reports">
+											<fileset dir="target/xml-reports">
+												<include name="**/*.xml"/>
+												<exclude name="**/TESTS-TestSuites.xml"/>
+											</fileset>
+											<report styledir="${project.build.directory}/test-classes" format="frames" todir="target/junit_report"/>
+										</junitreport>
+									</tasks>
+								</configuration>
+							</execution>
+						</executions>
+						<dependencies>
+							<dependency>
+								<groupId>ant</groupId>
+								<artifactId>ant-junit</artifactId>
+								<version>1.6.2</version>
+							</dependency>
+						</dependencies>
+					</plugin>
+
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>API-Dependency</id>
+			<activation>
+				<property>
+					<name>APIDependency</name>
+					<value>true</value>
+				</property>
+			</activation>
+			<modules>
+				<module>AutoTestRxConciergeUtility</module>
+				<module>AutoTestRxConciergeAPI</module>
+			</modules>
+		</profile>
+
+		<profile>
+			<id>UI-Dependency</id>
+			<activation>
+				<property>
+					<name>UIDependency</name>
+					<value>true</value>
+				</property>
+			</activation>
+			<modules>
+				<module>AutoTestRxConciergeUtility</module>
+				<module>AutoTestRxConciergeUI</module>
+			</modules>
+		</profile>
+
+		<profile>
+			<id>test-compile</id>
+
+			<activation>
+				<property>
+					<name>maven.test.skip</name>
+					<value>!true</value>
+				</property>
+			</activation>
+		</profile>
+
+	</profiles>
+
+</project>

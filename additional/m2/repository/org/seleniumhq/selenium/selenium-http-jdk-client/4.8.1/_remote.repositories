@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Apr 03 16:46:48 EDT 2023
+selenium-http-jdk-client-4.8.1.pom>prd-nexus=
+selenium-http-jdk-client-4.8.1.jar>prd-nexus=
+selenium-http-jdk-client-4.8.1-sources.jar>excellus-tst-nexus=

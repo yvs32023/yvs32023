@@ -1,0 +1,302 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>com.excellus.sqa</groupId>
+	<artifactId>junitReport</artifactId>
+	<version>1.2.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>JUnit report</name>
+	<description>JUnit report that is customize for SQA.</description>
+	
+	<organization>
+		<name>Excelluse - Software Quality Assurance</name>
+		<url>https://news.excellusbcbs.com/</url>
+	</organization>
+	
+	<contributors>
+		<contributor>
+			<name>Garrett Cosmiano</name>
+			<email>GarrettMari.Cosmiano@excellus.com</email>
+		</contributor>
+		<contributor>
+			<name>Brian Keenan</name>
+			<email>brian.keenan@excellus.com</email>
+		</contributor>
+	</contributors>
+	
+	<properties>
+		<java.version>11</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<junit.jupiter>5.6.2</junit.jupiter>
+		<junit.platform>1.6.2</junit.platform>
+	</properties>
+	
+	<dependencies>
+	
+		<!-- JUnit -->
+		
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>${junit.jupiter}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.platform</groupId>
+					<artifactId>junit-platform-commons</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>${junit.jupiter}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-commons</artifactId>
+			<version>${junit.platform}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-launcher</artifactId>
+			<version>${junit.platform}</version>
+		</dependency>
+		
+		<!-- Logging -->
+		
+		<dependency> 
+			<groupId>org.apache.logging.log4j</groupId> 
+			<artifactId>log4j-slf4j-impl</artifactId> 
+			<version>2.11.1</version> 
+		</dependency>
+		
+		<!-- Utility -->
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+		
+		<!-- Hamcrest (for test only) -->
+		
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-library</artifactId>
+			<version>2.1</version>
+		</dependency>
+		<dependency>
+			  <groupId>jakarta.xml.bind</groupId>
+			  <artifactId>jakarta.xml.bind-api</artifactId>
+			  <version>3.0.0</version>
+		</dependency>
+		<dependency>
+			  <groupId>com.sun.xml.bind</groupId>
+			  <artifactId>jaxb-impl</artifactId>
+			  <version>3.0.0</version>
+			  <!--  <scope>runtime</scope>-->
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>prd-nexus</id>
+			<name>Excelluse Nexus PRD environment</name>
+			<url>https://nexus.excellus.com/content/groups/public</url>
+		</repository>
+		<repository>
+			<id>local-repo</id>
+			<name>Local repository</name>
+			<url>file:${user.home}/.m2/repository</url>
+		</repository>
+	</repositories>
+	
+	<distributionManagement>   
+		<snapshotRepository>
+			<id>nexus</id>
+			<url>http://nexus.excellus.com/repository/maven-snapshots/</url>
+		</snapshotRepository>
+		<repository>
+			<id>nexus</id>
+			<url>http://nexus.excellus.com/repository/maven-releases/</url>
+		</repository>
+	</distributionManagement>
+		
+	<build>
+	
+		<directory>${project.basedir}/target</directory>
+		
+		<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+		<testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
+		
+		<outputDirectory>${project.build.directory}/classes</outputDirectory>
+		<testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
+		
+		<testResources>
+			<testResource><directory>${project.basedir}/src/main/resources</directory></testResource>
+			<testResource><directory>${project.basedir}/src/test/resources</directory></testResource>
+		</testResources>
+		
+		<plugins>
+			<!-- Compiler -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<release>${java.version}</release>
+				</configuration>
+			</plugin>
+			
+			<!-- Generate javadocs -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.2.0</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals><goal>jar</goal></goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<!-- Generate source -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals><goal>jar</goal></goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<!-- Deployment -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.8.2</version>
+			</plugin>
+			
+			<!-- Maven test framework - defined but no phase associated with it -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M4</version>
+				<executions>
+					<execution>
+						<id>default-test</id>
+						<phase>none</phase>
+					</execution>
+				</executions>
+			</plugin>
+		
+			<!-- Runs TestLauncher -->
+			<plugin>
+  				<groupId>org.codehaus.mojo</groupId>
+  				<artifactId>exec-maven-plugin</artifactId>
+  				<version>1.6.0</version>
+	  			<executions>
+  					<execution>
+  						<phase>test</phase>
+  						<goals><goal>java</goal></goals>
+  						<configuration>
+	  						<mainClass>com.excellus.sqa.junit.TestLauncher</mainClass>
+  							<classpathScope>test</classpathScope>
+  							<cleanupDaemonThreads>false</cleanupDaemonThreads>
+  							<systemProperties>
+  								<systemProperty>
+  									<key>package</key>
+  									<value>com.excellus.sqa.junit</value>
+  								</systemProperty>
+  							</systemProperties>
+  						</configuration>
+  					</execution>
+  				</executions>
+	  		</plugin>
+	  		
+	  		<!-- Plug-in to generate the JUnit HTML report -->
+	  		<plugin>
+	  			<artifactId>maven-antrun-plugin</artifactId>
+	  			<executions>
+	  				<execution>
+		  				<id>test-reports</id>
+		  				<phase>test</phase>
+		  				<goals><goal>run</goal></goals>
+		  				<configuration>
+		  					<tasks>
+		  						<junitreport todir="target/xml-reports">
+		  							<fileset dir="target/xml-reports">
+		  								<include name="**/*.xml"/>
+		  								<exclude name="**/TESTS-TestSuites.xml" />
+		  							</fileset>
+		  							<report styledir="${project.build.directory}/test-classes" format="frames" todir="target/junit_report"/>
+		  						</junitreport>
+		  					</tasks>
+		  				</configuration>
+	  				</execution>
+	  			</executions>
+	  			<dependencies>
+	  				<dependency>
+	  					<groupId>ant</groupId>
+	  					<artifactId>ant-junit</artifactId>
+	  					<version>1.6.2</version>
+	  				</dependency>
+	  			</dependencies>
+	  		</plugin>
+	  		
+		</plugins>
+		
+	</build>
+	
+	<profiles>
+		<profile>
+			<id>GenerateJunitReport</id>
+			<build>
+				<plugins>
+					<plugin>
+			  			<artifactId>maven-antrun-plugin</artifactId>
+			  			<executions>
+			  				<execution>
+				  				<id>test-reports-only</id>
+				  				<phase>validate</phase>
+				  				<goals><goal>run</goal></goals>
+				  				<configuration>
+				  					<tasks>
+				  						<mkdir dir="target/xml-reports"/>
+				  						<mkdir dir="target/test-classes"/>
+				  						<copy todir="target/test-classes">
+				  							<fileset dir="${project.basedir}/src/test/resources" includes="**/junit-frames.xsl" />
+				  						</copy>
+				  						<junitreport todir="target/xml-reports">
+				  							<fileset dir="target/xml-reports">
+				  								<include name="**/*.xml"/>
+				  								<exclude name="**/TESTS-TestSuites.xml"/>
+				  							</fileset>
+				  							<report styledir="${project.build.directory}/test-classes" format="frames" todir="target/junit_report"/>
+				  						</junitreport>
+				  					</tasks>
+				  				</configuration>
+			  				</execution>
+			  			</executions>
+			  			<dependencies>
+			  				<dependency>
+			  					<groupId>ant</groupId>
+			  					<artifactId>ant-junit</artifactId>
+			  					<version>1.6.2</version>
+			  				</dependency>
+			  			</dependencies>
+			  		</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+</project>

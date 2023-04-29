@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 21:54:56 EST 2023
+httpclient-4.5.13.pom>excellus-tst-nexus=
+httpclient-4.5.13-sources.jar>excellus-tst-nexus=
+httpclient-4.5.13.jar>prod-nexus=
+httpclient-4.5.13.pom>prod-nexus=
+httpclient-4.5.13.jar>excellus-tst-nexus=
+httpclient-4.5.13.jar>prd-nexus=
+httpclient-4.5.13.pom>prd-nexus=

@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:16 EST 2022
+selenium-chrome-driver-4.5.3.pom>excellus-tst-nexus=
+selenium-chrome-driver-4.5.3.jar>excellus-tst-nexus=
+selenium-chrome-driver-4.5.3.pom>prd-nexus=
+selenium-chrome-driver-4.5.3.jar>prd-nexus=
+selenium-chrome-driver-4.5.3-sources.jar>excellus-tst-nexus=

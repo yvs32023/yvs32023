@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:20 EST 2022
+jackson-databind-2.11.0.pom>excellus-tst-nexus=
+jackson-databind-2.11.0.jar>prd-nexus=
+jackson-databind-2.11.0.pom>prd-nexus=

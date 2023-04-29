@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:18 EST 2022
+opentelemetry-api-logs-1.19.0-alpha.pom>excellus-tst-nexus=
+opentelemetry-api-logs-1.19.0-alpha-sources.jar>excellus-tst-nexus=
+opentelemetry-api-logs-1.19.0-alpha.jar>excellus-tst-nexus=
+opentelemetry-api-logs-1.19.0-alpha.jar>prd-nexus=
+opentelemetry-api-logs-1.19.0-alpha.pom>prd-nexus=

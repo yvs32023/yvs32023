@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:22 EST 2022
+lang-tag-1.5-sources.jar>excellus-tst-nexus=
+lang-tag-1.5.jar>prd-nexus=
+lang-tag-1.5.jar>excellus-tst-nexus=
+lang-tag-1.5.pom>excellus-tst-nexus=
+lang-tag-1.5.pom>prd-nexus=

@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:21 EST 2022
+jopt-simple-5.0.4.jar>excellus-tst-nexus=
+jopt-simple-5.0.4.pom>prd-nexus=
+jopt-simple-5.0.4.pom>excellus-tst-nexus=
+jopt-simple-5.0.4-sources.jar>excellus-tst-nexus=
+jopt-simple-5.0.4.jar>prd-nexus=

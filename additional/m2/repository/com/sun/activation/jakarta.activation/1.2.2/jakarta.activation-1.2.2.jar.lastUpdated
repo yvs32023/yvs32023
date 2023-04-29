@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 21:23:22 EST 2023
+https\://repo.maven.apache.org/maven2/.lastUpdated=1672799002863
+http\://0.0.0.0/.error=Could not transfer artifact com.sun.activation\:jakarta.activation\:jar\:1.2.2 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [excellus-tst-nexus (http\://test-nexus.excellus.com/repository/public/, default, releases+snapshots)]
+http\://test-nexus.excellus.com/repository/public/.lastUpdated=1672158258177
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1672799000592
+https\://nexus.excellus.com/content/groups/public/.lastUpdated=1671811040461

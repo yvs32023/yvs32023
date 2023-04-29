@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 21:23:06 EST 2023
+https\://repo.maven.apache.org/maven2/.lastUpdated=1672798986023
+http\://0.0.0.0/.error=Could not transfer artifact io.netty\:netty-codec-http\:pom\:4.1.79.Final from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [excellus-tst-nexus (http\://test-nexus.excellus.com/repository/public/, default, releases+snapshots)]
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1672798985980

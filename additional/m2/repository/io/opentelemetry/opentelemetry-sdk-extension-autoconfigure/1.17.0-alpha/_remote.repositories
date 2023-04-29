@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 21:23:22 EST 2023
+opentelemetry-sdk-extension-autoconfigure-1.17.0-alpha.jar>excellus-tst-nexus=
+opentelemetry-sdk-extension-autoconfigure-1.17.0-alpha.jar>central=
+opentelemetry-sdk-extension-autoconfigure-1.17.0-alpha.pom>central=
+opentelemetry-sdk-extension-autoconfigure-1.17.0-alpha.pom>excellus-tst-nexus=

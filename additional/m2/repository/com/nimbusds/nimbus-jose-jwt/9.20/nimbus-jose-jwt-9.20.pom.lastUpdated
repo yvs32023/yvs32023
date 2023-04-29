@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:56:44 EST 2022
+http\://0.0.0.0/.error=Could not transfer artifact com.nimbusds\:nimbus-jose-jwt\:pom\:9.20 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [excellus-tst-nexus (http\://test-nexus.excellus.com/repository/public/, default, releases+snapshots)]
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1671811004695
+https\://nexus.excellus.com/content/groups/public/.lastUpdated=1671811004742

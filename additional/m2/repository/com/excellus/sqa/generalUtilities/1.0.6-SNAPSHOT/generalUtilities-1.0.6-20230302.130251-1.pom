@@ -1,0 +1,169 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		
+	<modelVersion>4.0.0</modelVersion>
+  	<groupId>com.excellus.sqa</groupId>
+  	<artifactId>generalUtilities</artifactId>
+  	<version>1.0.6-SNAPSHOT</version>
+  	<packaging>jar</packaging>
+  	<name>Framework Dependency</name>
+  	<description>Tha basic modules required for any test framework</description>
+
+  	<properties>
+		<java.version>11</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<junit.report.version>1.2.1-SNAPSHOT</junit.report.version>
+		<spring.version>5.3.14</spring.version>
+  	</properties>
+    
+	<dependencies>
+		<dependency>
+  			<groupId>com.oracle.ojdbc</groupId>
+  			<artifactId>ojdbc8</artifactId>
+  			<version>19.3.0.0</version>
+		</dependency>
+	  	<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+		
+		<dependency> 
+			<groupId>org.apache.logging.log4j</groupId> 
+			<artifactId>log4j-slf4j-impl</artifactId> 
+			<version>2.17.2</version> 
+		</dependency>
+		
+		<dependency>
+	  		<groupId>commons-codec</groupId>
+	  		<artifactId>commons-codec</artifactId>
+	  		<version>1.9</version>
+	  	</dependency>
+	  	
+	  	<dependency>
+	  		<groupId>commons-io</groupId>
+	  		<artifactId>commons-io</artifactId>
+	  		<version>2.10.0</version>	<!-- GC (07/31/21) updated version -->
+	  	</dependency>
+	  	
+	  	<dependency>
+			<groupId>org.apache.commons</groupId>
+    		<artifactId>commons-text</artifactId>
+  			<version>1.7</version>
+  		</dependency>
+  		
+  		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+	  	<dependency>
+       		<groupId>com.excellus.sqa</groupId>
+       		<artifactId>junitReport</artifactId>
+       		<version>${junit.report.version}</version>
+    	</dependency>
+    
+    	<dependency>
+  			<groupId>com.fasterxml.jackson.core</groupId>
+  			<artifactId>jackson-annotations</artifactId>
+  			<version>2.3.4</version>
+		</dependency>
+
+		<dependency>
+  			<groupId>com.fasterxml.jackson.core</groupId>
+  			<artifactId>jackson-core</artifactId>
+  			<version>2.6.0</version>
+		</dependency>
+		
+		<dependency>
+	  		<groupId>com.fasterxml.jackson.core</groupId>
+	  		<artifactId>jackson-databind</artifactId>
+	  		<version>2.9.10.1</version>
+		</dependency>
+	</dependencies>
+  
+	<repositories>
+		<repository>
+			<id>prd-nexus</id>
+			<name>Excelluse Nexus PRD environment</name>
+			<url>https://nexus.excellus.com/content/groups/public</url>
+		</repository>
+		<repository>
+			<id>local-repo</id>
+			<name>Local repository</name>
+			<url>file:${user.home}/.m2/repository</url>
+		</repository>
+	</repositories>
+	
+	<distributionManagement>   
+		<snapshotRepository>
+			<id>nexus</id>
+			<url>http://nexus.excellus.com/repository/maven-snapshots/</url>
+		</snapshotRepository>
+		<!--<repository>
+			<id>nexus</id>
+			<url>http://nexus.excellus.com/repository/maven-releases/</url>
+		</repository>-->
+	</distributionManagement>
+	
+	<build>
+	
+		<directory>${project.basedir}/target</directory>
+		
+		<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+		<testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
+		
+		<outputDirectory>${project.build.directory}/classes</outputDirectory>
+		<testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
+		
+		<testResources>
+			<testResource>
+				<directory>${project.basedir}/src/test/resources</directory>
+			</testResource>
+		</testResources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<release>${java.version}</release>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.2.0</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals><goal>jar</goal></goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals><goal>jar</goal></goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M4</version>
+			</plugin>
+		</plugins>
+	</build>
+	
+</project>

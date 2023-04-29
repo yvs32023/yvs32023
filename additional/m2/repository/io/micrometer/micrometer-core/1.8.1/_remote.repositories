@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:23 EST 2022
+micrometer-core-1.8.1.pom>excellus-tst-nexus=
+micrometer-core-1.8.1.jar>prd-nexus=
+micrometer-core-1.8.1.pom>prd-nexus=
+micrometer-core-1.8.1-sources.jar>excellus-tst-nexus=
+micrometer-core-1.8.1.jar>excellus-tst-nexus=

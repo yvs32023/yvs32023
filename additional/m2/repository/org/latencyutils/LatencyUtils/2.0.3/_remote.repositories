@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:23 EST 2022
+LatencyUtils-2.0.3.pom>excellus-tst-nexus=
+LatencyUtils-2.0.3.pom>prd-nexus=
+LatencyUtils-2.0.3.jar>prd-nexus=
+LatencyUtils-2.0.3.jar>excellus-tst-nexus=
+LatencyUtils-2.0.3-sources.jar>excellus-tst-nexus=

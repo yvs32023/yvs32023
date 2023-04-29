@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Mar 24 16:41:11 EDT 2023
+opentelemetry-exporter-logging-1.22.0.pom>excellus-tst-nexus=
+opentelemetry-exporter-logging-1.22.0-sources.jar>excellus-tst-nexus=
+opentelemetry-exporter-logging-1.22.0.jar>prd-nexus=
+opentelemetry-exporter-logging-1.22.0.jar>excellus-tst-nexus=
+opentelemetry-exporter-logging-1.22.0.pom>prd-nexus=

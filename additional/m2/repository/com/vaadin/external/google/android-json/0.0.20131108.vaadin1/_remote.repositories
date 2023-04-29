@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Mar 24 16:41:20 EDT 2023
+android-json-0.0.20131108.vaadin1.jar>excellus-tst-nexus=
+android-json-0.0.20131108.vaadin1.pom>prd-nexus=
+android-json-0.0.20131108.vaadin1.pom>excellus-tst-nexus=
+android-json-0.0.20131108.vaadin1-sources.jar>excellus-tst-nexus=
+android-json-0.0.20131108.vaadin1.jar>prd-nexus=

@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:22 EST 2022
+reactor-core-3.4.13.jar>prd-nexus=
+reactor-core-3.4.13-sources.jar>excellus-tst-nexus=
+reactor-core-3.4.13.jar>excellus-tst-nexus=
+reactor-core-3.4.13.pom>excellus-tst-nexus=
+reactor-core-3.4.13.pom>prd-nexus=

@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Mar 24 16:40:59 EDT 2023
+selenium-api-4.8.1.pom>excellus-tst-nexus=
+selenium-api-4.8.1-sources.jar>excellus-tst-nexus=
+selenium-api-4.8.1.jar>prd-nexus=
+selenium-api-4.8.1.pom>prd-nexus=
+selenium-api-4.8.1.jar>excellus-tst-nexus=

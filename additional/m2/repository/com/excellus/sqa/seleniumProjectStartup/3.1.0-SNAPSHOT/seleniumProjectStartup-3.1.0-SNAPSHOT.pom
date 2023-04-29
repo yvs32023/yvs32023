@@ -1,0 +1,299 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.excellus.sqa</groupId>
+	<artifactId>seleniumProjectStartup</artifactId>
+	<version>3.1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>Selenium test automation project starter</name>
+	<description>Web app test automation using Selenium</description>
+	
+	<organization>
+		<name>Excelluse - Software Quality Assurance</name>
+		<url>https://news.excellusbcbs.com/</url>
+	</organization>
+	
+	<contributors>
+		<contributor>
+			<name>Garrett Cosmiano</name>
+			<email>GarrettMari.Cosmiano@excellus.com</email>
+		</contributor>
+		<contributor>
+			<name>Brian Keenan</name>
+			<email>Brian.Keenan@excellus.com</email>
+		</contributor>
+	</contributors>
+
+	<properties>
+		<java.version>11</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<selenium.version>4.8.1</selenium.version> <!-- GC (03/10/23) -->
+		<general.utilities.version>1.0.6-SNAPSHOT</general.utilities.version>
+		<junit.report.version>1.2.1-SNAPSHOT</junit.report.version>
+		<spring.version>5.3.14</spring.version>
+	</properties>
+
+	<dependencies>
+	
+		<!-- SELENIUM -->
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-remote-driver</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+		
+		<!-- GC (03/10/23) updated to use the Java 11+ HTTP client - see https://www.selenium.dev/blog/2022/using-java11-httpclient/ -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-http-jdk-client</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+		
+		<!-- Framework dependency -->
+		
+		<dependency>
+  			<groupId>com.excellus.sqa</groupId>
+  			<artifactId>generalUtilities</artifactId>
+  			<version>${general.utilities.version}</version>
+		</dependency>
+		
+		<!-- JUnit -->
+
+		<dependency>
+			<groupId>com.excellus.sqa</groupId>
+			<artifactId>junitReport</artifactId>
+			<version>${junit.report.version}</version>
+		</dependency>
+		
+		<!-- Spring framework -->
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<!-- Logging -->
+		
+		<dependency> 
+			<groupId>org.apache.logging.log4j</groupId> 
+			<artifactId>log4j-slf4j-impl</artifactId> 
+			<version>2.17.2</version> 
+		</dependency>
+
+		<!-- Utility -->
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+    		<artifactId>commons-text</artifactId>
+  			<version>1.7</version>
+  		</dependency>
+  		
+  		<dependency>
+  			<groupId>commons-io</groupId>
+  			<artifactId>commons-io</artifactId>
+  			<version>2.10.0</version>	<!-- GC (07/31/21) updated version -->
+  		</dependency>
+  		
+  		<dependency>
+  			<groupId>commons-codec</groupId>
+  			<artifactId>commons-codec</artifactId>
+  			<version>1.9</version>
+  		</dependency>
+  		
+	</dependencies>
+	
+	<repositories>
+		<repository>
+			<id>prd-nexus</id>
+			<name>Excelluse Nexus PRD environment</name>
+			<url>https://nexus.excellus.com/content/groups/public</url>
+		</repository>
+		<repository>
+			<id>local-repo</id>
+			<name>Local repository</name>
+			<url>file:${user.home}/.m2/repository</url>
+		</repository>
+	</repositories>
+
+	<distributionManagement>   
+		<snapshotRepository>
+			<id>nexus</id>
+			<url>http://nexus.excellus.com/repository/maven-snapshots/</url>
+		</snapshotRepository>
+		<repository>
+			<id>nexus</id>
+			<url>http://nexus.excellus.com/repository/maven-releases/</url>
+		</repository>
+	</distributionManagement>
+	
+	<build>
+	
+		<directory>${project.basedir}/target</directory>
+		
+		<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+		<testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
+		
+		<outputDirectory>${project.build.directory}/classes</outputDirectory>
+		<testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
+		
+		<testResources>
+			<testResource>
+				<directory>${project.basedir}/src/test/resources</directory>
+			</testResource>
+		</testResources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<release>${java.version}</release>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.2.0</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals><goal>jar</goal></goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals><goal>jar</goal></goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<!-- 
+				Prevent maven from using surefire to run test via setting the phase to 'none'.
+				The TestLauncher from SQA junitReport will be used to launch the test.
+			 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M4</version>
+				<executions>
+					<execution>
+						<id>default-test</id>
+						<phase>none</phase>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<!-- Plug-in to execute SQA TestLauncher which generate custom JUnit xml report using SQA junitReport project -->
+			<plugin>
+  				<groupId>org.codehaus.mojo</groupId>
+  				<artifactId>exec-maven-plugin</artifactId>
+  				<version>1.6.0</version>
+	  			<executions>
+  					<execution>
+  						<phase>test</phase>
+  						<goals><goal>java</goal></goals>
+  						<configuration>
+	  						<mainClass>com.excellus.sqa.junit.TestLauncher</mainClass>
+  							<classpathScope>test</classpathScope>
+  							<cleanupDaemonThreads>false</cleanupDaemonThreads>
+  							<!-- Set TestLauncher with package 'com.excellus.sqa' as the source of test classes -->
+  							<systemProperties>
+  								<systemProperty>
+  									<key>package</key>
+  									<value>com.excellus.sqa</value>
+  								</systemProperty>
+  							</systemProperties>
+  						</configuration>
+  					</execution>
+  				</executions>
+	  		</plugin>
+	  		
+			<!-- Add the custom junit-frames.xsl from SQA junitReport project -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				 <executions>
+				 	<execution>
+				 		<phase>test</phase>
+  						<goals><goal>unpack</goal></goals>
+  						<configuration>
+  							<artifactItems>
+  								<artifactItem>
+  									<groupId>com.excellus.sqa</groupId>
+  									<artifactId>junitReport</artifactId>
+  									<version>${junit.report.version}</version>
+  									<overWrite>false</overWrite>
+  									<outputDirectory>${project.build.testOutputDirectory}</outputDirectory>
+  									<includes>**/*.xsl</includes>
+  								</artifactItem>
+  							</artifactItems>
+  						</configuration>
+				 	</execution>
+				 </executions>
+			</plugin>
+			
+	  		<!-- Plug-in to generate the JUnit HTML report -->
+	  		<plugin>
+	  			<artifactId>maven-antrun-plugin</artifactId>
+	  			<executions>
+	  				<execution>
+		  				<id>test-reports</id>
+		  				<phase>test</phase>
+		  				<goals><goal>run</goal></goals>
+		  				<configuration>
+		  					<tasks>
+		  						<junitreport todir="target/xml-reports">
+		  							<fileset dir="target/xml-reports">
+		  								<include name="**/*.xml"/>
+		  								<exclude name="**/TESTS-TestSuites.xml" />
+		  							</fileset>
+		  							<report styledir="${project.build.directory}/test-classes" format="frames" todir="target/junit_report"/>
+		  						</junitreport>
+		  					</tasks>
+		  				</configuration>
+	  				</execution>
+	  			</executions>
+	  			<dependencies>
+	  				<dependency>
+	  					<groupId>ant</groupId>
+	  					<artifactId>ant-junit</artifactId>
+	  					<version>1.6.2</version>
+	  				</dependency>
+	  			</dependencies>
+	  		</plugin>
+  		
+		</plugins>
+		
+	</build>
+	
+</project>

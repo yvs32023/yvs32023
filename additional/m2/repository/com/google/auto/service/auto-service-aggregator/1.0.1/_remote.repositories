@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 21:23:03 EST 2023
+auto-service-aggregator-1.0.1.pom>excellus-tst-nexus=
+auto-service-aggregator-1.0.1.pom>prd-nexus=
+auto-service-aggregator-1.0.1.pom>central=

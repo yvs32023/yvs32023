@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Mar 24 12:45:53 EDT 2023
+jboss-logging-3.1.4.GA.jar>excellus-tst-nexus=
+jboss-logging-3.1.4.GA.jar>prd-nexus=
+jboss-logging-3.1.4.GA.pom>prd-nexus=
+jboss-logging-3.1.4.GA-sources.jar>excellus-tst-nexus=
+jboss-logging-3.1.4.GA.pom>excellus-tst-nexus=

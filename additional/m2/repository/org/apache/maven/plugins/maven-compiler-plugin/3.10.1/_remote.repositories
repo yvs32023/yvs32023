@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 21:23:22 EST 2023
+maven-compiler-plugin-3.10.1.pom>central=
+maven-compiler-plugin-3.10.1.pom>excellus-tst-nexus=
+maven-compiler-plugin-3.10.1.jar>central=
+maven-compiler-plugin-3.10.1.jar>excellus-tst-nexus=

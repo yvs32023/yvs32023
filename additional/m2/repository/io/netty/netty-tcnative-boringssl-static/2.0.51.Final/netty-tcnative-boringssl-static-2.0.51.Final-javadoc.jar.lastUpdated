@@ -1,0 +1,10 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Dec 22 23:49:42 EST 2022
+https\://nexus.excellus.com/content/groups/public/.error=
+https\://repo.maven.apache.org/maven2/.lastUpdated=1671770982870
+http\://test-nexus.excellus.com/repository/public/.lastUpdated=1671770980814
+https\://repo.maven.apache.org/maven2/.error=
+file\:C\:\\Users\\vyeleswa/.m2/repository/.lastUpdated=1671770982287
+http\://test-nexus.excellus.com/repository/public/.error=
+https\://nexus.excellus.com/content/groups/public/.lastUpdated=1671770982269
+file\:C\:\\Users\\vyeleswa/.m2/repository/.error=

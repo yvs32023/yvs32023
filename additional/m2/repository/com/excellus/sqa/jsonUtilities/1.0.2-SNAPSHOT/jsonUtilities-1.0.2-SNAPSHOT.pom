@@ -1,0 +1,148 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.excellus.sqa</groupId>
+  <artifactId>jsonUtilities</artifactId>
+  <version>1.0.2-SNAPSHOT</version>
+  <name>JsonUtility</name>
+  <description>Utility functions to aid working with JSON files</description>
+  
+  <properties>
+		<java.version>11</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<selenium.version>4.1.0</selenium.version> <!-- Nov 2021 -->
+		<junit.report.version>1.0.3-SNAPSHOT</junit.report.version>
+		<spring.version>5.3.14</spring.version>
+  	</properties>
+  	
+  <dependencies>
+  
+  	<dependency>
+	  <groupId>com.fasterxml.jackson.core</groupId>
+	  <artifactId>jackson-databind</artifactId>
+	  <version>2.11.2</version>
+	</dependency>
+  	<dependency>
+    	<groupId>org.skyscreamer</groupId>
+    	<artifactId>jsonassert</artifactId>
+    	<version>1.5.1</version>
+    </dependency>
+    
+    <dependency>
+    	<groupId>org.everit.json</groupId>
+    	<artifactId>org.everit.json.schema</artifactId>
+    	<version>1.5.1</version>
+	</dependency>
+
+	<dependency>
+    	<groupId>org.json</groupId>
+    	<artifactId>json</artifactId>
+    	<version>20160810</version>
+	</dependency>
+	
+	<dependency>
+    	<groupId>com.jayway.jsonpath</groupId>
+    	<artifactId>json-path</artifactId>
+    	<version>2.7.0</version>
+	</dependency>    
+  
+    <dependency>
+       <groupId>commons-io</groupId>
+       <artifactId>commons-io</artifactId>
+       <version>2.10.0</version>
+    </dependency>
+
+	<dependency>
+		<groupId>org.junit.jupiter</groupId>
+		<artifactId>junit-jupiter-api</artifactId>
+		<version>5.9.0-M1</version>
+	</dependency>
+	  	
+	  	
+  </dependencies>
+  
+  <repositories>
+		<repository>
+			<id>prd-nexus</id>
+			<name>Excelluse Nexus PRD environment</name>
+			<url>https://nexus.excellus.com/content/groups/public</url>
+		</repository>
+		<repository>
+			<id>local-repo</id>
+			<name>Local repository</name>
+			<url>file:${user.home}/.m2/repository</url>
+		</repository>
+	</repositories>
+	
+	<distributionManagement>   
+		<snapshotRepository>
+			<id>nexus</id>
+			<url>http://nexus.excellus.com/repository/maven-snapshots/</url>
+		</snapshotRepository>
+		<!--<repository>
+			<id>nexus</id>
+			<url>http://nexus.excellus.com/repository/maven-releases/</url>
+		</repository>-->
+	</distributionManagement>
+	
+	<build>
+	
+		<directory>${project.basedir}/target</directory>
+		
+		<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+		<testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
+		
+		<outputDirectory>${project.build.directory}/classes</outputDirectory>
+		<testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
+		
+		<testResources>
+			<testResource>
+				<directory>${project.basedir}/src/test/resources</directory>
+			</testResource>
+		</testResources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<release>${java.version}</release>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.2.0</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals><goal>jar</goal></goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals><goal>jar</goal></goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M4</version>
+			</plugin>
+		</plugins>
+	</build>
+  
+</project>

@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:22 EST 2022
+msal4j-1.4.0.pom>prd-nexus=
+msal4j-1.4.0.pom>excellus-tst-nexus=
+msal4j-1.4.0.jar>prd-nexus=

@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:58:43 EST 2022
+plexus-utils-1.1.jar>prod-nexus=
+plexus-utils-1.1.pom>prod-nexus=

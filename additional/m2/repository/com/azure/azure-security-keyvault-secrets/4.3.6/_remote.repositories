@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:22 EST 2022
+azure-security-keyvault-secrets-4.3.6-sources.jar>excellus-tst-nexus=
+azure-security-keyvault-secrets-4.3.6.jar>prd-nexus=
+azure-security-keyvault-secrets-4.3.6.jar>excellus-tst-nexus=
+azure-security-keyvault-secrets-4.3.6.pom>excellus-tst-nexus=
+azure-security-keyvault-secrets-4.3.6.pom>prd-nexus=

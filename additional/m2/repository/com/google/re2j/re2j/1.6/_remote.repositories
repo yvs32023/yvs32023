@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Apr 19 17:54:42 EDT 2023
+re2j-1.6.pom>prd-nexus=
+re2j-1.6.jar>prd-nexus=
+re2j-1.6-sources.jar>excellus-tst-nexus=
+re2j-1.6.pom>excellus-tst-nexus=
+re2j-1.6.jar>excellus-tst-nexus=

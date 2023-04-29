@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 22:25:39 EST 2023
+selenium-java-4.7.1.jar>prd-nexus=
+selenium-java-4.7.1.pom>prd-nexus=

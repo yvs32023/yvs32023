@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Mar 24 12:45:44 EDT 2023
+pdfbox-2.0.27.jar>excellus-tst-nexus=
+pdfbox-2.0.27.jar>prd-nexus=
+pdfbox-2.0.27-sources.jar>excellus-tst-nexus=
+pdfbox-2.0.27.pom>excellus-tst-nexus=

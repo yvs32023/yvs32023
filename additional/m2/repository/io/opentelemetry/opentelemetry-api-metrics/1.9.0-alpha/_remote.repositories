@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 22:11:41 EST 2023
+opentelemetry-api-metrics-1.9.0-alpha.jar>central=
+opentelemetry-api-metrics-1.9.0-alpha.pom>prd-nexus=
+opentelemetry-api-metrics-1.9.0-alpha.pom>excellus-tst-nexus=

@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Apr 19 17:54:37 EDT 2023
+everit-json-schema-1.14.2.jar>prd-nexus=
+everit-json-schema-1.14.2.jar>excellus-tst-nexus=
+everit-json-schema-1.14.2-sources.jar>excellus-tst-nexus=
+everit-json-schema-1.14.2.pom>excellus-tst-nexus=

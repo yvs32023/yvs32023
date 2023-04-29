@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Mar 24 12:45:51 EDT 2023
+jbig2-imageio-3.0.4.jar>prd-nexus=
+jbig2-imageio-3.0.4.jar>excellus-tst-nexus=
+jbig2-imageio-3.0.4.pom>excellus-tst-nexus=
+jbig2-imageio-3.0.4.pom>prd-nexus=
+jbig2-imageio-3.0.4-sources.jar>excellus-tst-nexus=

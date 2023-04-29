@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:23 EST 2022
+slf4j-api-1.7.32.jar>excellus-tst-nexus=
+slf4j-api-1.7.32.pom>prd-nexus=
+slf4j-api-1.7.32.jar>prd-nexus=
+slf4j-api-1.7.32-sources.jar>excellus-tst-nexus=
+slf4j-api-1.7.32.pom>excellus-tst-nexus=

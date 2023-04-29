@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Mar 24 16:41:10 EDT 2023
+opentelemetry-api-1.22.0.jar>prd-nexus=
+opentelemetry-api-1.22.0.jar>excellus-tst-nexus=
+opentelemetry-api-1.22.0-sources.jar>excellus-tst-nexus=
+opentelemetry-api-1.22.0.pom>prd-nexus=
+opentelemetry-api-1.22.0.pom>excellus-tst-nexus=

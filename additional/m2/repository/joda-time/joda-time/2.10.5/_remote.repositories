@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 23 10:57:21 EST 2022
+joda-time-2.10.5.jar>prd-nexus=
+joda-time-2.10.5.pom>prd-nexus=
+joda-time-2.10.5.pom>excellus-tst-nexus=
+joda-time-2.10.5.jar>excellus-tst-nexus=
+joda-time-2.10.5-sources.jar>excellus-tst-nexus=

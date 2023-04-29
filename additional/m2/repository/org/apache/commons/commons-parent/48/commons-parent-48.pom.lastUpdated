@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jan 03 21:23:15 EST 2023
+https\://repo.maven.apache.org/maven2/.lastUpdated=1672798995914
+http\://0.0.0.0/.error=Could not transfer artifact org.apache.commons\:commons-parent\:pom\:48 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [excellus-tst-nexus (http\://test-nexus.excellus.com/repository/public/, default, releases+snapshots)]
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1672798995874
+https\://nexus.excellus.com/content/groups/public/.lastUpdated=1671810963489

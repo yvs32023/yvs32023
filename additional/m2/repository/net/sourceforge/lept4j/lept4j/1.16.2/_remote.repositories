@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Mar 24 12:45:52 EDT 2023
+lept4j-1.16.2.jar>excellus-tst-nexus=
+lept4j-1.16.2-sources.jar>excellus-tst-nexus=
+lept4j-1.16.2.pom>prd-nexus=
+lept4j-1.16.2.jar>prd-nexus=
+lept4j-1.16.2.pom>excellus-tst-nexus=
