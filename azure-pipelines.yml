@@ -1,0 +1,65 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+#trigger:
+#- Spike/114120_Json_SchemaValidation
+
+pool: 'excellus-win-autotests-build-pool' 
+
+
+resources:
+  repositories:
+  - repository: rxcc-schemas
+    type: git
+    name: rxcc-schemas
+    ref: main
+
+steps:
+- script: echo Checkout repos
+  displayName: 'Checkout repos'
+
+- checkout: self
+- checkout: rxcc-schemas
+
+- script: dir $(Build.SourcesDirectory)
+
+
+#Your build pipeline references an undefined variable named ‘environment’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
+#Your build pipeline references an undefined variable named ‘TestUserRoleFilter’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
+#Your build pipeline references an undefined variable named ‘SysKey’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
+#Your build pipeline references an undefined variable named ‘include-tag’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
+#Your build pipeline references an undefined variable named ‘test’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
+#Your build pipeline references an undefined variable named ‘TestUserRoleFilter’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
+#Your build pipeline references an undefined variable named ‘TestUserRoleFilter’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
+- task: AzureCLI@2
+  displayName: 'Azure CLI '
+  inputs:
+    azureSubscription: 'EXE-TST'
+    scriptType: ps
+    scriptLocation: inlineScript
+    inlineScript: |
+     cd $(Build.SourcesDirectory)/autotest-rxcc-concierge
+     dir $(Build.SourcesDirectory)/autotest-rxcc-concierge
+     mvn -version
+     mvn clean test -U -DAPIDependency -Denvironment=$(environment) -DTestUserRoleFilter="$(TestUserRoleFilter)" -DSysKey="$(SysKey)" -Dinclude-tag="$(include-tag)" -Dtest=$(test) -DreportDir=api/$(TestUserRoleFilter)/xml-reports -DpdfPath=api/$(TestUserRoleFilter)/pdfFaxes
+
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results **/TEST-*.xml'
+
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
+  inputs:
+    SourceFolder: '$(system.defaultworkingdirectory)'
+    Contents: |
+     **/target/api/**
+     **/target/errorscreen/**
+    TargetFolder: '$(build.artifactstagingdirectory)'
+  condition: succeededOrFailed()
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+  condition: succeededOrFailed()

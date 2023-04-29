@@ -1,0 +1,192 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>AutoTestRxConciergeUI</artifactId>
+	<packaging>jar</packaging>
+	
+	<parent>
+		<groupId>com.excellus.sqa</groupId>
+		<artifactId>AutoTestRxConcierge</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	
+	<contributors>
+		<contributor>
+			<name>Garrett Cosmiano</name>
+			<email>GarrettMari.Cosmiano@excellus.com</email>
+		</contributor>
+		<contributor>
+			<name>Husian Zia</name>
+			<email>Husian.Zia@excellus.com</email>
+		</contributor>
+		<contributor>
+			<name>Neeru Tagore</name>
+			<email>Neeru.Tagore@excellus.com</email>
+		</contributor>
+	</contributors>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>com.excellus.sqa</groupId>
+			<artifactId>AutoTestRxConciergeUtility</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	
+	</dependencies>
+	
+	<build>
+	
+		<directory>${project.basedir}/target</directory>
+		
+		<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+		<testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
+		
+		<outputDirectory>${project.build.directory}/classes</outputDirectory>
+		<testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
+		
+		<testResources>
+			<testResource>
+				<directory>${project.basedir}/src/test/resources</directory>
+			</testResource>
+		</testResources>
+
+		<plugins>
+		
+			<!-- Configure java compiler -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.10.0</version>
+				<configuration>
+					<release>${java.version}</release>
+				</configuration>
+			</plugin>
+
+			<!-- Configure surefire plugin as phase as "none" because it will use custom TestLauncher -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M4</version>
+				<executions>
+					<execution>
+						<id>default-test</id>
+						<phase>none</phase>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Add the custom junit-frames.xsl from SQA junitReport project -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				 <executions>
+				 	<execution>
+				 		<phase>test</phase>
+  						<goals><goal>unpack</goal></goals>
+  						<configuration>
+  							<artifactItems>
+  								<artifactItem>
+  									<groupId>com.excellus.sqa</groupId>
+  									<artifactId>junitReport</artifactId>
+  									<version>${junit.report.version}</version>
+  									<overWrite>false</overWrite>
+  									<outputDirectory>${project.build.testOutputDirectory}</outputDirectory>
+  									<includes>**/*.xsl</includes>
+  								</artifactItem>
+  							</artifactItems>
+  						</configuration>
+				 	</execution>
+				 </executions>
+			</plugin>
+
+			<!-- Run JUnit test -->
+			<plugin>
+  				<groupId>org.codehaus.mojo</groupId>
+  				<artifactId>exec-maven-plugin</artifactId>
+  				<version>1.6.0</version>
+	  			<executions>
+  					<execution>
+  						<phase>test</phase>
+  						<goals><goal>java</goal></goals>
+  						<configuration>
+	  						<mainClass>com.excellus.sqa.junit.TestLauncher</mainClass>
+  							<classpathScope>test</classpathScope>
+  							<cleanupDaemonThreads>false</cleanupDaemonThreads>
+  							<systemProperties>
+  								<systemProperty>
+  									<key>package</key>
+  									<value>com.excellus.sqa</value>
+  								</systemProperty>
+<!--  								<systemProperty>-->
+<!--  									<key>reportDir</key>-->
+<!--  									<value>ui/xml-reports</value>-->
+<!--  								</systemProperty>-->
+  							</systemProperties>
+  						</configuration>
+  					</execution>
+  				</executions>
+	  		</plugin>
+
+			<!-- Create JUnit HTML report -->
+	  		<plugin>
+	  			<artifactId>maven-antrun-plugin</artifactId>
+	  			<executions>
+	  				<execution>
+		  				<id>test-reports</id>
+		  				<phase>test</phase>
+		  				<goals><goal>run</goal></goals>
+		  				<configuration>
+		  					<tasks>
+		  						<junitreport todir="../target/${reportDir}">
+		  							<fileset dir="../target/${reportDir}">
+		  								<include name="**/*.xml"/>
+		  								<exclude name="**/TESTS-TestSuites.xml" />
+		  							</fileset>
+		  							<report styledir="${project.build.directory}/test-classes" format="frames" todir="../target/${reportDir}/../junit_report"/>
+		  						</junitreport>
+		  					</tasks>
+		  				</configuration>
+	  				</execution>
+	  			</executions>
+	  			<dependencies>
+	  				<dependency>
+	  					<groupId>ant</groupId>
+	  					<artifactId>ant-junit</artifactId>
+	  					<version>1.6.2</version>
+	  				</dependency>
+	  			</dependencies>
+	  		</plugin>
+
+		</plugins>
+		
+	</build>
+	
+
+	<profiles>
+	
+		<profile>
+			<id>test-compile</id>
+			<activation>
+				<property>
+					<name>skipTests</name>
+					<value>!true</value>
+				</property>
+			</activation>
+			
+			<dependencies>
+				<dependency>
+					<groupId>com.excellus.sqa</groupId>
+					<artifactId>AutoTestRxConciergeUtility</artifactId>
+					<version>${project.version}</version>
+					<classifier>tests</classifier>
+					<scope>test</scope>
+				</dependency>
+			</dependencies>
+			
+		</profile>
+		
+	</profiles>
+
+</project>

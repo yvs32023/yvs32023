@@ -1,0 +1,92 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	
+	<artifactId>AutoTestRxConciergeUtility</artifactId>
+	<packaging>jar</packaging>
+
+	<parent>
+		<groupId>com.excellus.sqa</groupId>
+		<artifactId>AutoTestRxConcierge</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	
+	<contributors>
+		<contributor>
+			<name>Garrett Cosmiano</name>
+			<email>GarrettMari.Cosmiano@excellus.com</email>
+		</contributor>
+		<contributor>
+			<name>Husian Zia</name>
+			<email>Husian.Zia@excellus.com</email>
+		</contributor>
+		<contributor>
+			<name>Neeru Tagore</name>
+			<email>Neeru.Tagore@excellus.com</email>
+		</contributor>
+		<contributor>
+			<name>Manish Sharma</name>
+			<email>Manish.Sharma@excellus.com</email>
+		</contributor>
+	</contributors>
+
+	<properties>
+		<test.resources>${project.parent.basedir}/src/test/resources</test.resources>
+	</properties>
+	
+	<build>
+
+		<plugins>
+		
+			<!--  Gather resources from the parent module -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<resources>
+						<resource>
+							<directory>${project.parent.basedir}/src/test/resources</directory>
+						</resource>
+						<resource>
+							<directory>${project.parent.basedir}/../rxcc-schemas/schemas</directory>
+						</resource>
+					</resources>
+				</configuration>
+			</plugin>
+
+			<!-- Configure java compiler -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.10.0</version>
+				<configuration>
+					<release>${java.version}</release>
+				</configuration>
+			</plugin>
+
+			<!-- Configure surefire plugin as phase as "none" because it will use custom TestLauncher -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M4</version>
+				<executions>
+					<execution>
+						<id>default-test</id>
+						<phase>none</phase>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<!-- Generate jar -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.2.2</version>
+			</plugin>
+
+		</plugins>
+	
+	</build>
+	
+</project>
